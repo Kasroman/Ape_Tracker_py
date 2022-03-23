@@ -1,0 +1,39 @@
+Niveau compte = levelSummoner
+Ligue = tierSummoner
+Division = rankSummoner
+LPs = leaguePointsSummoner
+Gagnées = winsSummoner
+Perdues = lossesSummoner
+Total games jouées = totalGamesSummoner
+Winrate total = winrateSummoner
+
+
+
+
+Games analysées = totalGames
+
+Champions les plus joués : mostPlayedChampionsDict  / Format : 'n° champ' : [kills, deaths, assists, KDA, farm, cs/min, kill participation, score de vision, wins, loses , jouées, winrate]
+Positions les plus jouées : mostPlayedPositionDict / Format : 'ROLE' : [kills, deaths, assists, KDA, farm, cs/min, kill participation, score de vision, wins, loses , jouées, winrate]
+10 dernières games jouées : last10GamesDict / Format : Numero de game : ['Champion', kills, deaths, assists, KDA, farm, cs/min, kill participation, score de vision, win/lose]
+Toutes les games analysées : totalPlayedGamesDict / Format : 'allGames' : [kills, deaths, assists, KDA, farm, cs/min, kill participation, score de vision, wins, loses , jouées, winrate]
+
+# scanResult[0 à 8] [nom summoner, niveau compte, ligue, division, LPs, gagnées, perdues, total des games, winrate total]
+
+# par champions les plus joués
+# scanResult[9][x] est un index qui retourne le nom du champion a la position x. 0 est le champion le plus joué
+# x est le numéro de champ dans l'ordre de l'index plus haut
+# scanResult[10][x] [kills, deaths, assists, KDA, farm, cs/min, kp, score vision, wins, loses, jouées, winrate]
+
+# par positions
+# scanResult[11][x] est un index qui retourne le nom du role a la position x. 0 est la lane la plus jouée
+# x est le numéro de position dans l'ordre de l'index plus haut
+# scanResult[12][x] [kills, deaths, assists, KDA, farm, cs/min, kp, score de vision, wins, loses, jouées, winrate]
+# 'TOP' 'JUNGLE' 'MIDDLE' 'BOTTOM' 'UTILITY'
+
+# 10 dernières games
+# x est le numéro de la game de 0 a 9
+# scanResult[13][x] ['champion', kills, deaths, assists, KDA, farm, cs/min, kp, score de vision, win/lose]
+
+# toutes les games
+# scanResult[14]['allGames'] [kills, deaths, assits, KDA, farm, cs/min, kp, score de vision, wins, loses, jouées, winrate]
+

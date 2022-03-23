@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ApeTracker</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+
+	<header>
+		
+	</header>
+
+	<div class="mainBox">
+		<img class="logo" src="{% static 'img/Icone1200x300.png' %}" width="500px">
+	</div>
+
+	<div class="searchBox flexCenter">
+		<form class="searchBar" action="/results/" method="post">
+			{% csrf_token %}
+			<input class="bar" type="text" name="userName" required placeholder="Summoner Name, Summoner Name, ..."><button class="button">Search</button>
+		</form>
+	</div>
+	
+</body>
+</html>
